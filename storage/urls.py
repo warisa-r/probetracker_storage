@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 from api.views import PhotoView
 
 urlpatterns = [
+    path('', admin.site.urls),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('media/<path:filename>/', PhotoView.as_view()),
